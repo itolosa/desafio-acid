@@ -4,7 +4,7 @@ function transformFile() {
   var reader  = new FileReader();
 
   reader.addEventListener("load", function () {
-    hidden_input.value = reader.result.replace(/^data:;base64,/, "");
+    hidden_input.value = reader.result.replace(/^data:;base64,|^data:application\/octet-stream;base64,/, "");
   }, false);
 
   if (file) {

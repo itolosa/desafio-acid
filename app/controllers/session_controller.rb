@@ -7,7 +7,7 @@ class SessionController < ApplicationController
 
   def login
     # hace el request a webservice2
-    response = post_to_webservice(params[:email], params[:image])
+    response = post_to_webservice(login_params[:email], login_params[:image])
 
     # Se envian los correos de inicio de sesion
     # deliver_later es un metodo que facilita ActiveJob
