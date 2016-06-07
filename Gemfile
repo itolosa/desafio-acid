@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faraday'
 
 gem 'sucker_punch'
+require 'sucker_punch/async_syntax'
 
 gem "figaro"
 
