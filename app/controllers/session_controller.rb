@@ -13,14 +13,14 @@ class SessionController < ApplicationController
     # deliver_later es un metodo que facilita ActiveJob
     # permite encolar correos como workers
     if response.status == 200
-      UserMailer.login_success_email('ignatg@gmail.com', request.user_agent).deliver_later
+      UserMailer.login_success_email(login_params[:email], request.user_agent).deliver_later
       render json: response.body, status: response.status
     elsif response.status == 401
-      UserMailer.login_failed_email('ignatg@gmail.com', request.user_agent).deliver_later
+      UserMailer.login_failed_email(login_params[:email], request.user_agent).deliver_later
       render json: response.body, status: response.status
     else
       # Codigo de respuesta no esperado
-      UserMailer.login_failed_email('ignatg@gmail.com', request.user_agent).deliver_later
+      UserMailer.login_failed_email(login_params[:email], request.user_agent).deliver_later
       raise "Error Interno"
     end
 
