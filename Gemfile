@@ -39,6 +39,8 @@ gem 'sidekiq'
 
 gem "figaro"
 
+gem 'foreman'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
