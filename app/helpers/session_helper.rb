@@ -1,7 +1,7 @@
 module SessionHelper
   def post_to_webservice(email, image)
     # configura la conexion hacia el WebService2
-    conn = Faraday.new(url: 'http://127.0.0.1:3000') do |faraday|
+    conn = Faraday.new(url: 'http://serene-shore-63130.herokuapp.com') do |faraday|
       faraday.request  :url_encoded
       # usar Net::HTTP por defecto
       faraday.adapter  Faraday.default_adapter
