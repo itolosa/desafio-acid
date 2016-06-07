@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'faraday'
 
-gem 'sidekiq'
+gem 'delayed_job_active_record'
 
 gem "figaro"
 
