@@ -76,4 +76,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # cherry pick from another repo
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   :address              => "smtp.sendgrid.net",
+   :port                 => 587,
+   :domain               => 'desafio-acid.com',
+   :user_name            => ENV['user_mailer'],
+   :password             => ENV['pass_mailer'],
+   :authentication       => :plain,
+   :enable_starttls_auto => true
+  }
+
+  config.action_mailer.perform_deliveries = true
 end

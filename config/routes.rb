@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  post 'rest/verifyUser/:email', to: 'service#verify_user', as: :service_verify_user, constraints: { email: /[^\/]+/}
+  post 'rest/login', to: 'session#login', as: :user_session_login
+  get 'session/index2'
+  root 'session#index'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
