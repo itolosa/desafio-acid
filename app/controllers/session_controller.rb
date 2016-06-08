@@ -1,13 +1,13 @@
-class SessionController < ApplicationController
-  include SessionHelper
+require 'web_service_client'
 
+class SessionController < ApplicationController
   def index
     # solo responde con el formulario
   end
 
   def login
     # hace el request a webservice2
-    response = post_to_webservice(login_params[:email], login_params[:image])
+    response = WebServiceClient.post(login_params[:email], login_params[:image])
 
     # Se envian los correos de inicio de sesion
     # deliver_later es un metodo que facilita ActiveJob

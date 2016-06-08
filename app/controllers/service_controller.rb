@@ -1,5 +1,4 @@
 class ServiceController < ApplicationController
-  include ServiceHelper
   
   def verify_user
     user = User.find_by(email: user_params[:email])
@@ -11,6 +10,9 @@ class ServiceController < ApplicationController
   end
 
   private
+  def format_msg(msg)
+    { message: msg }
+  end
 
   def user_params
     params.require(:image)
