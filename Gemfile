@@ -33,6 +33,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# bootstrap, agrega css por debajo
+gem 'bootstrap-sass'
+gem 'bootstrap'
+
+# complemento para bootstrap
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 gem 'faraday'
 
 gem 'sucker_punch'

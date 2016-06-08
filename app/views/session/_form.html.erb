@@ -1,8 +1,18 @@
-<form action="/rest/login" method="post" enctype="application/json">
-  <input type="hidden" name="image" id="base64input">
-  <input type="text" name="email">
-  <input type="file" onchange="transformFile()"><br>
-  <input type="submit" value="Submit">
-</form>
-
-
+<div id="main-container" class="container">
+  <div class="row">
+    <form action="/rest/login" method="post" enctype="application/json" >
+      <input type="hidden" name="image" id="base64input" >
+      <div class="form-group">
+        <label for="user-email">Your email</label>
+        <input type="text" id="useremail" name="email" class="form-control" placeholder="ignacio@acid.cl">
+      </div>
+      <div class="form-group">
+        <label for="face-file">Upload your face:</label>
+        <input type="file" id="facefile" onchange="transformFile()"><br>
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-default">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
