@@ -8,3 +8,5 @@
 
 User.create(email: 'ignacio@acid.cl', status: 401)
 User.create(email: 'iverdejo@acid.cl', status: 200)
+User.create(email: 'ignatg@gmail.com', status: 200)
+User.create(email: 'ignatg2@gmail.com', status: 401)
